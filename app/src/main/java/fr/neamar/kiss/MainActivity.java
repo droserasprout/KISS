@@ -491,6 +491,8 @@ public class MainActivity extends Activity implements QueryInterface, KeyboardSc
             mPopup.dismiss();
         } else if (isViewingAllApps()) {
             displayKissBar(false);
+        } else if (TextUtils.isEmpty(searchEditText.getText())) {
+            showKeyboard();
         } else {
             // If no kissmenu, empty the search bar
             // (this will trigger a new event if the search bar was already empty)
